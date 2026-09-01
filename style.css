@@ -1,0 +1,615 @@
+* {
+    margin: 0;
+    padding: 0;
+    front-family: 'Poppins', sans-sarif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+
+
+.logo {
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style:none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:#ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+.header-text{
+    margin-top: 20%;
+    front-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color:#ff004f;
+}
+/*-----------about---------------------------*/
+#about{
+    padding:80px 0;
+    color: #ababab;
+
+}
+
+.about-col-1 img {
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    display : block;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-col-1{
+    flex-basis: 35%;
+
+}
+.about-col-2{
+    flex-basis: 45%;
+
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color:#fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10 px 0;
+
+}
+.tab-contents ul li span{
+    color:#b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+
+}
+.tab-contents.active-tab{
+    display: block;
+
+}
+/*-------------------projects----------*/
+#projects {
+    padding: 30px 0;
+}
+
+.Projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.Projects-list > div {
+    background: #262626;
+    padding: 40px;
+    min-height: 350px;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.Projects-list > div:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* PROJECT ICONS */
+.Projects-list > div > i {
+    font-size: 60px !important;
+    margin-bottom: 25px;
+    display: block;
+}
+
+/* PROJECT TITLE */
+.Projects-list h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* PROJECT DESCRIPTION */
+.Projects-list p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* LEARN MORE */
+.Projects-list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .Projects-list {
+        grid-template-columns: 1fr;
+    }
+}
+/*---------------------achivements--------------------*/
+#achivements{
+    padding: 50px 0;
+}
+/* ================= ACHIEVEMENTS ================= */
+
+#achievements {
+    padding: 80px 0;
+}
+
+.achievement-timeline {
+    position: relative;
+    margin-top: 60px;
+    padding-left: 30px;
+}
+
+/* Vertical line */
+.achievement-timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #64ffda;
+}
+
+/* Achievement item */
+.achievement-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+/* Circle on timeline */
+.achievement-item::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 8px;
+    width: 9px;
+    height: 9px;
+    border: 2px solid #64ffda;
+    background: #000;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+/* ================= THREE IMAGES ================= */
+
+.achievement-images {
+    width: 280px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.achievement-images img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+/* ================= SINGLE IMAGE / ICON ================= */
+
+.achievement-image {
+    width: 100px;
+    height: 90px;
+    background: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.achievement-image i {
+    font-size: 40px;
+    color: #64ffda;
+}
+
+
+/* ================= CONTENT ================= */
+
+.achievement-content {
+    flex: 1;
+}
+
+.achievement-year {
+    display: block;
+    color: #64ffda;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.achievement-content h2 {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 0 8px;
+    font-weight: 600;
+}
+
+.achievement-content p {
+    color: #9aa5a5;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .achievement-item {
+        flex-direction: column;
+    }
+
+    .achievement-images {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .achievement-image {
+        width: 90px;
+    }
+}
+.achievement-image {
+    width: 180px;
+    height: 120px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.achievement-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*--------------------contact---------*/
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
+
+#contact {
+    width: 100%;
+    padding: 80px 0;
+    background: #000;
+    color: #fff;
+}
+
+
+/* Main row */
+
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   LEFT SIDE
+===================================================== */
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+
+/* Contact heading */
+
+.contact-title {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+
+/* Email and phone */
+
+.contact-left p {
+    font-size: 20px;
+    margin: 25px 0;
+}
+
+
+/* Email + phone icons */
+
+.contact-left p i {
+    color: #ff004f;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.social-icons {
+    margin-top: 40px;
+}
+
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+
+    font-size: 32px;
+
+    margin-right: 20px;
+
+    display: inline-block;
+
+    transition: 0.3s;
+}
+
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+
+/* =====================================================
+   DOWNLOAD CV BUTTON
+===================================================== */
+
+.download-btn {
+    display: inline-block;
+
+    margin-top: 40px;
+
+    padding: 14px 45px;
+
+    background: #ff004f;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+
+.download-btn:hover {
+    background: #d90045;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   RIGHT SIDE FORM
+===================================================== */
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+
+.contact-right form {
+    width: 100%;
+}
+
+
+/* Input and textarea */
+
+.contact-right input,
+.contact-right textarea {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: #262626;
+
+    color: #fff;
+
+    padding: 18px;
+
+    margin: 15px 0;
+
+    font-size: 18px;
+
+    border-radius: 6px;
+
+    box-sizing: border-box;
+}
+
+
+/* Message box */
+
+.contact-right textarea {
+    resize: vertical;
+}
+
+
+/* Placeholder */
+
+.contact-right input::placeholder,
+.contact-right textarea::placeholder {
+    color: #888;
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.submit-btn {
+
+    margin-top: 20px;
+
+    padding: 14px 45px;
+
+    background: #ff004f;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.submit-btn:hover {
+
+    background: #d90045;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media only screen and (max-width: 768px) {
+
+    #contact {
+        padding: 50px 20px;
+    }
+
+
+    .contact-left {
+        flex-basis: 100%;
+    }
+
+
+    .contact-right {
+        flex-basis: 100%;
+        margin-top: 50px;
+    }
+
+
+    .contact-title {
+        font-size: 45px;
+    }
+
+
+    .contact-left p {
+        font-size: 18px;
+    }
+
+
+    .social-icons a {
+        font-size: 28px;
+        margin-right: 15px;
+    }
+
+
+    .download-btn {
+        margin-top: 30px;
+    }
+
+}
+.contact-left p i {
+    color: #ff004f !important;
+    font-size: 25px;
+    margin-right: 15px;
+}
